@@ -219,7 +219,6 @@ button { cursor: pointer; }
   }
   .hero-copy { max-width: 520px; }
   .btn-outline { align-self: flex-start; }
-  .scroll-cue { left: var(--gutter); transform: none; }
 }
 
 .eyebrow {
@@ -270,8 +269,7 @@ button { cursor: pointer; }
 .scroll-cue {
   position: absolute;
   bottom: 36px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: var(--gutter);
   display: flex;
   flex-direction: column;
   align-items: center;
