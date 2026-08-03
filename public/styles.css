@@ -501,16 +501,20 @@ button { cursor: pointer; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 60% 60% at 50% 40%, transparent 40%, rgba(237,230,211,.4) 100%);
+  background: radial-gradient(ellipse 60% 60% at 50% 40%, transparent 40%, rgba(237,230,211,.5) 100%);
   pointer-events: none;
+  z-index: 2;
 }
 .product-img {
-  width: 72%;
+  width: 80%;
   object-fit: contain;
   position: relative;
   z-index: 1;
+  /* multiply blends white bg into the cream stage, leaving just the pouch */
+  mix-blend-mode: multiply;
   transition: transform .6s var(--ease);
 }
+.product-stage:hover .product-img { transform: scale(1.03); }
 .product-stage:hover .product-img { transform: scale(1.03); }
 
 .product-info { padding: 24px 0 0; }
