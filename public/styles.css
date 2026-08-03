@@ -510,8 +510,6 @@ button { cursor: pointer; }
   object-fit: contain;
   position: relative;
   z-index: 1;
-  /* multiply blends white bg into the cream stage, leaving just the pouch */
-  mix-blend-mode: multiply;
   transition: transform .6s var(--ease);
 }
 .product-stage:hover .product-img { transform: scale(1.03); }
