@@ -190,7 +190,6 @@ button { cursor: pointer; }
 }
 .hero-ship img {
   width: 100%;
-  mix-blend-mode: multiply;
   opacity: .88;
   animation: float 9s ease-in-out infinite;
 }
