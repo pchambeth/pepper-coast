@@ -477,23 +477,25 @@ button { cursor: pointer; }
 .tl-item--now .tl-item p { color: rgba(246,241,232,.65); }
 
 .tl-img {
-  width: 100%;
-  aspect-ratio: 3/2;
+  width: clamp(120px, 14vw, 200px);
+  height: clamp(120px, 14vw, 200px);
+  border-radius: 50%;
   object-fit: cover;
-  border-radius: 2px;
+  object-position: center;
   display: block;
-  margin-top: 28px;
-  opacity: .85;
+  margin: 28px auto 0;
+  opacity: .88;
+  flex-shrink: 0;
 }
 
 @media (min-width: 760px) {
   .tl-item {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: clamp(32px,5vw,72px);
-    align-items: start;
+    display: flex;
+    align-items: center;
+    gap: clamp(40px, 5vw, 80px);
   }
-  .tl-img { margin-top: 0; }
+  .tl-body { flex: 1; }
+  .tl-img { margin: 0; }
   .tl-item p { max-width: none; }
 }
 
