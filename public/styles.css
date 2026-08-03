@@ -715,11 +715,13 @@ details[open] .acc-icon { transform: rotate(45deg); }
   aspect-ratio: 2/3;
   border-radius: 2px;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
 }
-.km-1 { background: linear-gradient(165deg, #C17D2C 0%, #7A5220 100%); margin-top: 0; }
-.km-2 { background: linear-gradient(165deg, #3D5A3D 0%, #2A4020 100%); margin-top: 40px; }
-.km-3 { background: linear-gradient(165deg, #8B6F47 0%, #5E4A2D 100%); margin-top: 0; }
-.km-4 { background: linear-gradient(165deg, #4A6741 0%, #2C4A2C 100%); margin-top: 72px; }
+.km-1 { background-image: url('images/pepper-bg.jpg'); margin-top: 0; }
+.km-2 { background-image: url('images/westernghats-bg.jpg'); margin-top: 40px; }
+.km-3 { background-image: url('images/harvesthands-bg.jpg'); margin-top: 0; }
+.km-4 { background-image: url('images/spiceplantation-bg.jpg'); margin-top: 72px; }
 
 .kerala-prose {
   font-family: var(--serif);
