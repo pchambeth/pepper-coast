@@ -165,8 +165,7 @@ button { cursor: pointer; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0;
-  padding: 120px var(--gutter) 100px;
+  padding: 112px var(--gutter) 96px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -184,9 +183,10 @@ button { cursor: pointer; }
 
 .hero-ship {
   position: relative;
-  width: clamp(260px, 40vw, 520px);
-  margin-bottom: 48px;
+  width: clamp(220px, 30vw, 400px);
+  margin-bottom: 44px;
   will-change: transform;
+  flex-shrink: 0;
 }
 .hero-ship img {
   width: 100%;
@@ -199,7 +199,28 @@ button { cursor: pointer; }
   50%      { transform: translateY(-14px); }
 }
 
-.hero-copy { position: relative; }
+.hero-copy {
+  position: relative;
+  max-width: 600px;
+}
+
+/* Side-by-side on wide screens */
+@media (min-width: 960px) {
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    gap: clamp(48px, 6vw, 100px);
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-ship {
+    width: clamp(280px, 28vw, 440px);
+    margin-bottom: 0;
+  }
+  .hero-copy { max-width: 520px; }
+  .btn-outline { align-self: flex-start; }
+  .scroll-cue { left: var(--gutter); transform: none; }
+}
 
 .eyebrow {
   font-size: 11px;
