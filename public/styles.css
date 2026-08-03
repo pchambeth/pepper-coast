@@ -770,9 +770,10 @@ details[open] .acc-icon { transform: rotate(45deg); }
 }
 .footer-ship {
   width: 72px;
-  opacity: .35;
+  opacity: .28;
   mix-blend-mode: screen;
-  filter: grayscale(1) brightness(1.5);
+  /* invert makes white bg → black (disappears via screen), dark lines → light */
+  filter: invert(1) sepia(.3) brightness(1.8);
 }
 .footer-name {
   font-family: var(--serif);
